@@ -44,7 +44,9 @@ const Player = () => {
     if (isNaN(timeInSeconds)) return "00:00";
     const minutes = Math.floor(timeInSeconds / 60);
     const seconds = Math.floor(timeInSeconds % 60);
-    return `${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+    return `${minutes < 10 ? "0" + minutes : minutes}:${
+      seconds < 10 ? "0" + seconds : seconds
+    }`;
   };
 
   useEffect(() => {
@@ -105,7 +107,7 @@ const Player = () => {
               </>
             )}
 
-            <div className="w-full flex items-center font-thin text-green-400">
+            <div className="w-full flex items-center font-thin text-white">
               <span className="text-xs mr-2">{formatTime(progress)}</span>
               <input
                 type="range"
